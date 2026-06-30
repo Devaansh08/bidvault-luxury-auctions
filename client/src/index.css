@@ -1,0 +1,137 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    /* Light mode: Theme (#9CB080, #618764, #2B5748, #273338) */
+    --background: 85 20% 98%;
+    --foreground: 198 18% 19%;
+    --card: 0 0% 100%;
+    --card-foreground: 198 18% 19%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 198 18% 19%;
+    --primary: 159 34% 25%;
+    --primary-foreground: 85 25% 96%;
+    --secondary: 85 23% 90%;
+    --secondary-foreground: 159 34% 25%;
+    --muted: 85 15% 92%;
+    --muted-foreground: 125 16% 42%;
+    --accent: 85 23% 85%;
+    --accent-foreground: 159 34% 25%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 85 15% 85%;
+    --input: 85 15% 85%;
+    --ring: 125 16% 45%;
+    --radius: 0.75rem;
+    /* Soft Sage Gold accent */
+    --gold: 85 23% 60%;
+  }
+
+  .dark {
+    /* Dark mode: Theme (#273338, #2B5748, #618764, #9CB080) */
+    --background: 198 18% 13%;
+    --foreground: 85 23% 90%;
+    --card: 198 18% 16%;
+    --card-foreground: 85 23% 90%;
+    --popover: 198 18% 16%;
+    --popover-foreground: 85 23% 90%;
+    --primary: 85 23% 60%;
+    --primary-foreground: 198 18% 13%;
+    --secondary: 159 34% 25%;
+    --secondary-foreground: 85 23% 90%;
+    --muted: 198 18% 22%;
+    --muted-foreground: 125 16% 65%;
+    --accent: 159 34% 28%;
+    --accent-foreground: 85 23% 90%;
+    --destructive: 0 63% 35%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 198 18% 25%;
+    --input: 198 18% 25%;
+    --ring: 85 23% 60%;
+    --gold: 85 23% 65%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(var(--muted-foreground) / 0.5);
+  }
+}
+
+@layer utilities {
+  .glass {
+    background-color: hsl(var(--background) / 0.6);
+    backdrop-filter: blur(24px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+  .glass-card {
+    background-color: hsl(var(--card) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  }
+  .gradient-primary {
+    background: linear-gradient(135deg, rgb(43, 87, 72), rgb(97, 135, 100));
+  }
+  .gradient-gold {
+    background: linear-gradient(135deg, rgb(97, 135, 100), rgb(156, 176, 128));
+  }
+  .text-gradient {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(135deg, rgb(43, 87, 72), rgb(97, 135, 100));
+  }
+  .text-gradient-gold {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(135deg, rgb(97, 135, 100), rgb(156, 176, 128));
+  }
+  .dark .gradient-primary {
+    background: linear-gradient(135deg, rgb(156, 176, 128), rgb(97, 135, 100));
+  }
+  .dark .text-gradient {
+    background-image: linear-gradient(135deg, rgb(156, 176, 128), rgb(97, 135, 100));
+  }
+  .animate-in {
+    animation: fade-in 0.3s ease-out;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

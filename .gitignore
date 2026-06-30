@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment Variables
+.env
+.env.local
+.env.production
+server/.env
+client/.env
+
+# Build & Logs
+dist/
+build/
+client/dist/
+*.log
+npm-debug.log*
+
+# IDE & AI Assistant Files
+.DS_Store
+.idea/
+.vscode/
+.gemini/
+.system_generated/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
