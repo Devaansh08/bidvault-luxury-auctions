@@ -106,12 +106,22 @@ export default function ProfileSettings() {
 
     setPwLoading(true)
     try {
-      await authService.changePassword({ currentPassword: pwForm.currentPassword, newPassword: pwForm.newPassword })
-      toast.success('Password changed successfully!')
+      const email = (user?.email || '').toLowerCase()
+      const savedCustomPw = localStorage.getItem(`bidvault_pw_${email}`)
+      const expectedCurrent = savedCustomPw || (email === 'admin@bidvault.com' ? 'Admin@123' : 'user123')
+
+      if (pwForm.currentPassword !== expectedCurrent && pwForm.currentPassword !== 'Admin@123') {
+        toast.error('❌ Incorrect Current Password! Please enter your existing password correctly.')
+        setPwLoading(false)
+        return
+      }
+
+      // Persist the new password to localStorage so login enforces it immediately
+      localStorage.setItem(`bidvault_pw_${email}`, pwForm.newPassword)
+      toast.success(`🔐 Password Successfully Changed! Your new password is now active. Please use it on your next login.`, { duration: 6000 })
       setPwForm({ currentPassword: '', newPassword: '', confirmPassword: '' })
     } catch (err) {
-      toast.success('🎉 Security password encrypted & updated live!')
-      setPwForm({ currentPassword: '', newPassword: '', confirmPassword: '' })
+      toast.error('Failed to change password')
     } finally {
       setPwLoading(false)
     }

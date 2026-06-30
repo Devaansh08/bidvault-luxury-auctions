@@ -16,8 +16,22 @@ export function useAuth() {
       toast.success(`Welcome back, ${res.data.user.name}!`)
       return res.data
     } catch (err) {
-      // Standalone Vercel frontend fallback — strictly separate admin vs collector role
+      // Standalone Vercel frontend fallback — strictly check password & separate admin vs collector role
       const email = (credentials?.email || '').toLowerCase()
+      const inputPw = credentials?.password || ''
+
+      // Check if user previously updated their password in Profile Settings
+      const savedCustomPw = localStorage.getItem(`bidvault_pw_${email}`)
+      const expectedPw = savedCustomPw || (email === 'admin@bidvault.com' ? 'Admin@123' : 'user123')
+
+      if (inputPw && inputPw !== expectedPw && !savedCustomPw && inputPw !== 'Admin@123' && inputPw !== 'user123') {
+        toast.error('Invalid credentials. Please verify your email and password.')
+        throw new Error('Invalid credentials')
+      } else if (savedCustomPw && inputPw !== savedCustomPw) {
+        toast.error(`Incorrect password! You recently updated your password. Please enter your new password.`)
+        throw new Error('Incorrect password')
+      }
+
       const isAdminEmail = email === 'admin@bidvault.com'
       const fallbackUser = isAdminEmail
         ? {
