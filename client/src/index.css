@@ -16,7 +16,7 @@
     --secondary: 85 23% 90%;
     --secondary-foreground: 159 34% 25%;
     --muted: 85 15% 92%;
-    --muted-foreground: 125 16% 42%;
+    --muted-foreground: 125 18% 34%;
     --accent: 85 23% 85%;
     --accent-foreground: 159 34% 25%;
     --destructive: 0 84.2% 60.2%;
@@ -32,19 +32,19 @@
   .dark {
     /* Dark mode: Theme (#273338, #2B5748, #618764, #9CB080) */
     --background: 198 18% 13%;
-    --foreground: 85 23% 90%;
+    --foreground: 85 23% 94%;
     --card: 198 18% 16%;
-    --card-foreground: 85 23% 90%;
+    --card-foreground: 85 23% 94%;
     --popover: 198 18% 16%;
-    --popover-foreground: 85 23% 90%;
+    --popover-foreground: 85 23% 94%;
     --primary: 85 23% 60%;
     --primary-foreground: 198 18% 13%;
     --secondary: 159 34% 25%;
-    --secondary-foreground: 85 23% 90%;
+    --secondary-foreground: 85 23% 94%;
     --muted: 198 18% 22%;
-    --muted-foreground: 125 16% 65%;
+    --muted-foreground: 125 18% 75%;
     --accent: 159 34% 28%;
-    --accent-foreground: 85 23% 90%;
+    --accent-foreground: 85 23% 94%;
     --destructive: 0 63% 35%;
     --destructive-foreground: 210 40% 98%;
     --border: 198 18% 25%;
@@ -67,6 +67,7 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     font-family: Inter, system-ui, sans-serif;
+    font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
