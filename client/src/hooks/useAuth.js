@@ -52,9 +52,19 @@ export function useAuth() {
             bio: 'Watch & Art Collector. Passionate about 1960s vintage mechanical horology.',
             location: 'New Delhi, India',
           }
-      dispatch(setUser(fallbackUser))
-      toast.success(`Welcome back, ${fallbackUser.name}! (${isAdminEmail ? 'Admin Mode' : 'Collector Mode'})`)
-      return { user: fallbackUser, token: 'mock-jwt-token-vercel' }
+
+      // Check if user previously saved a custom profile (including device uploaded avatar)
+      let finalUser = fallbackUser
+      try {
+        const savedProfileStr = localStorage.getItem(`bidvault_profile_${email}`)
+        if (savedProfileStr) {
+          finalUser = { ...fallbackUser, ...JSON.parse(savedProfileStr) }
+        }
+      } catch {}
+
+      dispatch(setUser(finalUser))
+      toast.success(`Welcome back, ${finalUser.name}! (${isAdminEmail ? 'Admin Mode' : 'Collector Mode'})`)
+      return { user: finalUser, token: 'mock-jwt-token-vercel' }
     } finally {
       dispatch(setLoading(false))
     }
