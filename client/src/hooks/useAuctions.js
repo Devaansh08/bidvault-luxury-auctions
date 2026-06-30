@@ -17,7 +17,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 14,
     endDateHours: 36,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=65&auto=format',
     seller: { name: 'Horology Vault London' }
   },
   {
@@ -30,7 +30,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 19,
     endDateHours: 48,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=500&q=65&auto=format',
     seller: { name: 'Geneva Estates' }
   },
   {
@@ -43,7 +43,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 18,
     endDateHours: 72,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1547996169-4f35a4d6f0cf?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1547996169-4f35a4d6f0cf?w=500&q=65&auto=format',
     seller: { name: 'Salon de Horlogerie' }
   },
 
@@ -58,7 +58,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 29,
     endDateHours: 60,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&q=65&auto=format',
     seller: { name: 'Scuderia Heritage Milan' }
   },
   {
@@ -71,7 +71,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 34,
     endDateHours: 84,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=500&q=65&auto=format',
     seller: { name: 'Stuttgart Classics' }
   },
   {
@@ -84,7 +84,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 21,
     endDateHours: 42,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=500&q=65&auto=format',
     seller: { name: 'Apex Supercar Vault' }
   },
 
@@ -99,7 +99,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 22,
     endDateHours: 54,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=500&q=65&auto=format',
     seller: { name: 'Contemporary Curators UK' }
   },
   {
@@ -112,7 +112,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 17,
     endDateHours: 90,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=500&q=65&auto=format',
     seller: { name: 'Galerie Beaux-Arts' }
   },
   {
@@ -125,7 +125,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 25,
     endDateHours: 30,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=500&q=65&auto=format',
     seller: { name: 'SOHO Art Syndicate' }
   },
 
@@ -140,7 +140,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 31,
     endDateHours: 66,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=65&auto=format',
     seller: { name: 'Silicon Valley Archives' }
   },
   {
@@ -153,7 +153,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 27,
     endDateHours: 45,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&q=65&auto=format',
     seller: { name: 'Leitz Optics Foundation' }
   },
   {
@@ -166,7 +166,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 39,
     endDateHours: 24,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=500&q=65&auto=format',
     seller: { name: 'Tokyo Retro Vault' }
   },
 
@@ -181,7 +181,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 11,
     endDateHours: 36,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=65&auto=format',
     seller: { name: 'Paris Luxury Auctions' }
   },
   {
@@ -194,7 +194,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 16,
     endDateHours: 72,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=500&q=65&auto=format',
     seller: { name: 'Palais Galliera Heritage' }
   },
   {
@@ -207,7 +207,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 24,
     endDateHours: 48,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&q=65&auto=format',
     seller: { name: 'Maison Luggage Paris' }
   },
 
@@ -222,7 +222,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 15,
     endDateHours: 80,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&q=65&auto=format',
     seller: { name: 'Imperial Heritage HK' }
   },
   {
@@ -235,7 +235,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 18,
     endDateHours: 50,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&q=65&auto=format',
     seller: { name: 'Numismatic Curators Rome' }
   },
   {
@@ -248,7 +248,7 @@ const EVERGREEN_LUXURY_POOL = [
     totalBids: 28,
     endDateHours: 96,
     status: 'active',
-    image: 'https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=500&q=65&auto=format',
     seller: { name: 'Vienna Philharmonic Guild' }
   }
 ]

@@ -42,14 +42,14 @@ export default function AuctionCard({ auction, index = 0 }) {
               src={
                 imgError || !image
                   ? {
-                      vehicles: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80',
-                      art: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&q=80',
-                      jewelry: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80',
-                      electronics: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&q=80',
-                      fashion: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=800&q=80',
-                      antiques: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&q=80',
-                    }[category] || 'https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?w=800&q=80'
-                  : image
+                      vehicles: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&q=65&auto=format',
+                      art: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=500&q=65&auto=format',
+                      jewelry: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=65&auto=format',
+                      electronics: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&q=65&auto=format',
+                      fashion: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&q=65&auto=format',
+                      antiques: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&q=65&auto=format',
+                    }[category] || 'https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?w=500&q=65&auto=format'
+                  : image.includes('unsplash.com') && !image.includes('&w=') ? `${image}?w=500&q=65&auto=format` : image
               }
               alt={title}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -57,6 +57,7 @@ export default function AuctionCard({ auction, index = 0 }) {
                 if (!imgError) setImgError(true)
               }}
               loading="lazy"
+              decoding="async"
             />
 
             {/* Status badge */}
